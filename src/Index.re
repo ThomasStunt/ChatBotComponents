@@ -1,3 +1,8 @@
-ReactDOMRe.renderToElementWithId(<Component1 message="Hello! Click this text." />, "index1");
 
-ReactDOMRe.renderToElementWithId(<Component2 greeting="Hello!" />, "index2");
+module App = {
+    let component = ReasonReact.statelessComponent("App");
+    let make = _children => {...component, render: _self => <h1>ReasonReact.string("ChatbotComponents")</h1>};
+};
+  
+ ReactDOMRe.renderToElementWithId(<App />, "main");
+  
