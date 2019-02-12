@@ -8,7 +8,7 @@
     "watch": "concurrently -k -n bsb,jest -c magenta,green,blue \"bsb -make-world -w\" \"jest --watch\" \"parcel watch index.html\"",
     "byte": "bsb -backend",
     "test": "npm run build && jest --coverage",
-    "parcel": "parcel index.html"
+    "parcel": "parcel src/index.html"
   },
   "keywords": [
     "BuckleScript"
@@ -16,15 +16,16 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "reason-react": ">=0.4.0",
     "@glennsl/bs-json": "^3.0.0",
+    "bs-css": "^8.0.1",
     "bs-fetch": "^0.3.1",
     "bs-json": "^1.0.1",
     "compression": "^1.7.3",
     "express": "^4.16.4",
-    "helmet": "^3.15.0"
+    "helmet": "^3.15.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "reason-react": ">=0.4.0"
   },
   "devDependencies": {
     "@glennsl/bs-jest": "^0.4.7",

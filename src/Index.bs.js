@@ -4,6 +4,8 @@
 var React = require("react");
 var ReactDOMRe = require("reason-react/src/ReactDOMRe.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
+var Input$ChatbotComponent = require("./components/input/input.bs.js");
+var Header$ChatbotComponent = require("./components/header/header.bs.js");
 
 var component = ReasonReact.statelessComponent("App");
 
@@ -19,7 +21,7 @@ function make(_children) {
           /* willUpdate */component[/* willUpdate */7],
           /* shouldUpdate */component[/* shouldUpdate */8],
           /* render */(function (_self) {
-              return React.createElement("h1", undefined, "ChatbotComponents");
+              return React.createElement("div", undefined, ReasonReact.element(undefined, undefined, Header$ChatbotComponent.make(/* array */[])), ReasonReact.element(undefined, undefined, Input$ChatbotComponent.make(/* array */[])));
             }),
           /* initialState */component[/* initialState */10],
           /* retainedProps */component[/* retainedProps */11],
