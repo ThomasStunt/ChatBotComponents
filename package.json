@@ -2,13 +2,13 @@
   "name": "chatbot",
   "version": "0.1.0",
   "scripts": {
-    "build": "bsb -make-world",
-    "start": "bsb -make-world -w",
+    "start": "node ./server",
     "clean": "bsb -clean-world",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack": "webpack -w",
-    "webpack:production": "NODE_ENV=production webpack",
-    "server": "webpack-dev-server"
+    "build": "bsb -make-world && parcel build index.html",
+    "watch": "concurrently -k -n bsb,jest -c magenta,green,blue \"bsb -make-world -w\" \"jest --watch\" \"parcel watch index.html\"",
+    "byte": "bsb -backend",
+    "test": "npm run build && jest --coverage",
+    "parcel": "parcel index.html"
   },
   "keywords": [
     "BuckleScript"
@@ -28,10 +28,6 @@
   },
   "devDependencies": {
     "bs-platform": "^4.0.18",
-    "html-webpack-plugin": "^3.2.0",
-    "webpack": "^4.0.1",
-    "webpack-cli": "^3.1.1",
-    "webpack-dev-server": "^3.1.8",
     "@glennsl/bs-jest": "^0.4.7",
     "bsb-js": "^1.1.7",
     "concurrently": "^4.1.0",
