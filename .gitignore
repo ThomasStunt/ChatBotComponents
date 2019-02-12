@@ -1,6 +1,10 @@
+node_modules
+lib/bs
+coverage
 .DS_Store
 .merlin
 .bsb.lock
+dist
+*.bs.js
+.cache
 npm-debug.log
-/lib/bs/
-/node_modules/
