@@ -7,7 +7,7 @@ var ReasonReact = require("reason-react/src/ReasonReact.js");
 var Input$ChatbotComponent = require("./components/input/input.bs.js");
 var Header$ChatbotComponent = require("./components/header/header.bs.js");
 
-var component = ReasonReact.statelessComponent("App");
+var component = ReasonReact.statelessComponent("Index");
 
 function make(_children) {
   return /* record */[
@@ -30,12 +30,12 @@ function make(_children) {
         ];
 }
 
-var App = /* module */[
+var Index = /* module */[
   /* component */component,
   /* make */make
 ];
 
 ReactDOMRe.renderToElementWithId(ReasonReact.element(undefined, undefined, make(/* array */[])), "main");
 
-exports.App = App;
+exports.Index = Index;
 /* component Not a pure module */
