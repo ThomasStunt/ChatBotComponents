@@ -8,3 +8,4 @@ dist
 *.bs.js
 .cache
 npm-debug.log
+.idea
